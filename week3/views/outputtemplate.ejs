@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Simple Blog</title>
+</head>
+
+<body>
+    <h1>Simple Blog</h1>
+
+    <hr />
+    <h2>Posts</h2>
+    <% data.forEach((data, i) => {  %>
+		<div id="dataout<%= i %>"><a href="/displayrecord?_id=<%= data._id %>"><%= data.text %></a></div>
+    <% }); %>
+
+    <hr />
+    <h2>Search</h2>
+    <div>
+        <form method="GET" action="/search">
+            <input type="text" name="q" placeholder="Title">
+            <input type="submit" value="Search">
+        </form>
+    </div>
+
+    <hr />
+    <h2>Add</h2>
+    <form method="POST" action="/formdata">
+        <input type="text" name="data" placeholder="Title" />
+        <br />
+        <br />
+        <textarea name="longtext" cols="80" rows="8" placeholder="Content"></textarea>
+        <br />
+        <input type="submit" name="submit" value="Post" />
+    </form>
+</body>
+
+</html>
