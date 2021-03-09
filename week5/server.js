@@ -3,7 +3,7 @@ const fs = require("fs");
 
 const credentials = {
   key: fs.readFileSync("/etc/letsencrypt/live/viviify.com/privkey.pem"),
-  cert: fs.readFileSync("/etc/letsencrypt/live/viviify.com/fullchain.pem")
+  cert: fs.readFileSync("/etc/letsencrypt/live/viviify.com/cert.pem")
 };
 
 const express = require("express");
