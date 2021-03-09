@@ -9,9 +9,11 @@ const credentials = {
 const express = require("express");
 const app = express();
 
-app.get("/", function(req, res) {
+app.get("/", (req, res) => {
 	res.send("Hello World!!!");
 });
 
 const httpsServer = https.createServer(credentials, app);
-httpsServer.listen(4084);
+httpsServer.listen(4084, () => {
+    console.log("Listening on port 4084");
+});
