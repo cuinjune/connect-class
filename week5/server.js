@@ -2,8 +2,8 @@ const https = require("https");
 const fs = require("fs");
 
 const credentials = {
-  key: fs.readFileSync("/etc/letsencrypt/live/viviify.com/privkey.pem"),
-  cert: fs.readFileSync("/etc/letsencrypt/live/viviify.com/fullchain.pem")
+  key: fs.readFileSync("privkey.pem"),
+  cert: fs.readFileSync("fullchain.pem")
 };
 
 const express = require("express");
